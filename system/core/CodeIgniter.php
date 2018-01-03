@@ -402,6 +402,11 @@ if ( ! is_php('5.4'))
 	$class = ucfirst($RTR->class);
 	$method = $RTR->method;
 
+	if(substr($class, 0, 1) === '~') {
+		$method = substr($class, 1);
+		$class = 'Site';
+	}
+
 	if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
 	{
 		$e404 = TRUE;

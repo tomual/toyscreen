@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-3">
 
-        <?php echo $message ?>
+        <?php echo $message?>
 
         <form action="<?php echo base_url('user/register') ?>" method="post" accept-charset="utf-8">
 

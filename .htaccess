@@ -348,14 +348,20 @@ AddDefaultCharset utf-8
     # Options +SymLinksIfOwnerMatch
 
     # (4)
-    # RewriteBase /
+    RewriteBase /
 
     # (5)
     # RewriteOptions <options>
 
+    # RewriteRule ^~(.*)$ /site/$1 [L]
+
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L]
+
+    # RewriteRule ^index.php/~(.*)$ /site/$1 [R=301,L]
+
 
 </IfModule>
 
