@@ -3,63 +3,48 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>tomual</title>
+        <title>Title</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
         <link rel="stylesheet" href="<?php echo base_url('css/normalize.css') ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/home.css') ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
     </head>
     <body>
         <div class="container">
             <header>
-                <h1>tomual <small>personal site and portfolio <span>🗗</span></small></h1>
-                <img src="<?php echo base_url('images/banner.png') ?>">
+                <h2>Toyscreen</h2>
+                <?php if($this->ion_auth->logged_in()): ?>
+                    <?php var_dump($this->ion_auth->user()) ?>
+                    Hello, <?php echo $this->ion_auth->user()->username ?>
+                    <a href="<?php echo base_url('user/logout') ?>">Log Out</a>
+                <?php else: ?>
+                    <a href="<?php echo base_url('user/login') ?>">Log In</a>
+                    <a href="<?php echo base_url('user/register') ?>">Register</a>
+                <?php endif ?>
             </header>
-            <nav>
-                <p>↓ select a menu item below.</p>
-                <ul>
-                    <!-- <li><a href="<?php echo base_url() ?>">home</a></li> -->
-                    <li><a href="<?php echo base_url('software') ?>">software</a></li>
-                    <li><a href="<?php echo base_url('stuff') ?>">stuff</a></li>
-                    <li><a href="<?php echo base_url('gallery') ?>">gallery</a></li>
-                    <li><a href="<?php echo base_url('blog') ?>">blog</a></li>
-                    <li><a href="<?php echo base_url('about') ?>">about</a></li>
-                </ul>
-            </nav>
-            <section class="whats-new">
-                <h2>what's new</h2>
-                <br>
-                <ul>
-                    <li>2017-12-30: new layout</li>
-                    <li>2017-11-25: blog // firefox quantum</li>
-                    <li>2017-11-07: site to codeingiter</li>
-                </ul>
-            </section>
-            <footer>
-                copyright &copy;  tomual 2017 // contact
-            </footer>
         </div>
 
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="<?php echo base_url('js/vendor/modernizr-2.8.3.min.js') ?>"></script>
+        <script src="<?php echo base_url('js/plugins.js') ?>"></script>
+        <script src="<?php echo base_url('js/main.js') ?>"></script>
 
-        <!-- <script src="js/vendor/modernizr-3.5.0.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-89678350-1','auto');ga('send','pageview');
         </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>

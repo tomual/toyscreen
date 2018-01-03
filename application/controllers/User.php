@@ -43,6 +43,7 @@ class User extends CI_Controller {
 
 	public function register()
 	{
+		$message = '';
 		if ($this->ion_auth->logged_in())
 		{
 			redirect('/', 'refresh');
@@ -65,6 +66,10 @@ class User extends CI_Controller {
 		        $group = array('1');
 		        if($this->ion_auth->register($username, $password, $email, $additional_data, $group)) {
 		        	$this->ion_auth->login($username, $password, TRUE);
+
+		        	$user = $this->users_model->get_by_username($username);
+		        	$site = $this->sites_model->create($user);
+
 		        	$this->session->set_flashdata('success', 'Successfully signed up');
 		        	redirect('/');
 		        } else {

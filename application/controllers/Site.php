@@ -10,7 +10,13 @@ class Site extends CI_Controller {
 
 	public function _remap($username)
 	{
-		echo $username;
-		show_404();
+		$user = $this->users_model->get_by_username($username);
+		if (!$user) {
+			show_404();
+			return;
+		}
+		$post = $this->posts_model->get_post();
+		$site = $this->sites_model->get_by_username($user->username);
+		$this->load->view('site', compact('post', 'site'));
 	}
 }

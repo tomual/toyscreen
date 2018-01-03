@@ -1631,7 +1631,7 @@ class Ion_auth_model extends CI_Model
 
 		$this->users();
 
-		return $this;
+		return $this->row();
 	}
 
 	/**

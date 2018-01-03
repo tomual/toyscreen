@@ -13,7 +13,9 @@ class Users_model extends CI_Model {
         $this->db->where('username', $username);
         $query = $this->db->get('users');
         $user = $query->first_row();
-        $user->user_id = $user->id;
+        if($user) {
+            $user->user_id = $user->id;
+        }
         return $user;
     }
 
