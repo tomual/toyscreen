@@ -15,8 +15,47 @@ class Site extends CI_Controller {
 			show_404();
 			return;
 		}
-		$post = $this->posts_model->get_post();
-		$site = $this->sites_model->get_by_username($user->username);
+		$site = $this->sites_model->get_by_user_id($user->user_id);
+
+		$page = $this->uri->segment(2);
+
+		switch ($page) {
+			case 'archive':
+				$this->archive($site);
+				break;
+
+			case 'board':
+				$this->board($site);
+				break;
+
+			case 'info':
+				$this->info($site);
+				break;
+			
+			default:
+				$this->home($site);
+				break;
+		}
+	}
+
+	public function home($site)
+	{
+		$post = $this->posts_model->get_post($site->site_id);
 		$this->load->view('site', compact('post', 'site'));
+	}
+
+	public function archive($site)
+	{
+		$this->load->view('archive', compact('site'));
+	}
+
+	public function board($site)
+	{
+		$this->load->view('board', compact('site'));
+	}
+
+	public function info($site)
+	{
+		$this->load->view('info', compact('site'));
 	}
 }

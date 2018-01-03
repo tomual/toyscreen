@@ -23,7 +23,6 @@
             <header>
                 <h2>Toyscreen</h2>
                 <?php if($this->ion_auth->logged_in()): ?>
-                    <?php var_dump($this->ion_auth->user()) ?>
                     Hello, <?php echo $this->ion_auth->user()->username ?>
                     <a href="<?php echo base_url('user/logout') ?>">Log Out</a>
                 <?php else: ?>

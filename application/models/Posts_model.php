@@ -19,9 +19,15 @@ class Posts_model extends CI_Model {
         $this->db->update('posts', $data);
     }
 
-    public function get_post($post_id)
+    public function get_post($site_id, $post_id = NULL)
     {
-        $this->db->where('posts.post_id', $post_id);
+        if(!$post_id) {
+            $this->db->order_by('posted', 'DESC');
+            $this->db->limit(1);
+        } else {
+            $this->db->where('post_id', $post_id);
+        }
+        $this->db->where('site_id', $site_id);
         $result = $this->db->get('posts')->first_row();
         return $result;
     }
