@@ -16,7 +16,26 @@
 
         <link rel="stylesheet" href="<?php echo base_url('css/normalize.css') ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
     </head>
     <body>
-        <div class="container">
+        
+        <style type="text/css">
+            body {
+                background: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
+                background-repeat: repeat;
+            }
+        </style>
+        <div class="container"> 
+            <div class="header">
+                <h1><?php echo $site->title ?></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="<?php echo base_url("~{$site->user->username}") ?>">Home</a></li>
+                    <li><a href="<?php echo base_url("~{$site->user->username}/archive") ?>">Archive</a></li>
+                    <li><a href="<?php echo base_url("~{$site->user->username}/board") ?>">Board</a></li>
+                    <li><a href="<?php echo base_url("~{$site->user->username}/info") ?>">Info</a></li>
+                </ul>
+            </div>
+            <div class="main">
