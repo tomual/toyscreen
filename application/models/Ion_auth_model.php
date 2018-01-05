@@ -532,7 +532,7 @@ class Ion_auth_model extends CI_Model
 			$this->set_error('deactivate_unsuccessful');
 			return FALSE;
 		}
-		else if ($this->ion_auth->logged_in() && $this->user()->row()->id == $id)
+		else if ($this->ion_auth->logged_in() && $this->user()->id == $id)
 		{
 			$this->set_error('deactivate_current_user_unsuccessful');
 			return FALSE;
@@ -1846,7 +1846,7 @@ class Ion_auth_model extends CI_Model
 	{
 		$this->trigger_events('pre_update_user');
 
-		$user = $this->user($id)->row();
+		$user = $this->user($id);
 
 		$this->db->trans_begin();
 
@@ -2032,7 +2032,7 @@ class Ion_auth_model extends CI_Model
 			return FALSE;
 		}
 
-		$user = $this->user($id)->row();
+		$user = $this->user($id);
 
 		$salt = $this->salt();
 

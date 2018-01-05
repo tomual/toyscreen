@@ -1,6 +1,7 @@
 
             </div>
         </div>
+        <footer><a href="<?php echo base_url() ?>">toyscreen</a></footer>
 
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="<?php echo base_url('js/vendor/modernizr-2.8.3.min.js') ?>"></script>

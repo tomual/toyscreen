@@ -1,15 +1,15 @@
-<?php $this->load->view('header.php') ?>
+<?php $this->load->view('header_home.php') ?>
 
 <h1>Login</h1>
 <div class="row">
     <div class="col-md-3">
 
-        <?php echo $this->session->flashdata('message') ?>
+        <span class="error"><?php echo $this->session->flashdata('message') ?></span>
 
         <form action="<?php echo base_url('user/login') ?>" method="post" accept-charset="utf-8">
             <div>
                 <label for="identity">Email</label>
-                <input type="text" class="form-control" name="identity" value="" id="identity">
+                <input type="text" class="form-control" name="identity" value="<?php echo set_value('identity') ?>" id="identity">
                 <?php echo form_error('identity') ?>
             </div>
             <div>
@@ -24,10 +24,12 @@
             Remember Me
         </label>
 
+        <br>
         <input type="submit" class="btn btn-primary btn-embossed" name="submit" value="Login">
         </form>
         <br>
         <a href="forgot_password"><?php echo lang('login_forgot_password') ?></a>
     </div>
 </div>
-<?php $this->load->view('footer.php') ?>
+
+<?php $this->load->view('footer_home.php') ?>

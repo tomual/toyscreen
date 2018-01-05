@@ -17,6 +17,11 @@
         <link rel="stylesheet" href="<?php echo base_url('css/normalize.css') ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
+
     </head>
     <body>
         <div class="container">
+        <header>
+            <a href="<?php echo base_url() ?>"><img src="https://tomual.com/images/toybox/dogs/dog-1.png"></a>
+            <a href="<?php echo base_url() ?>"><h2>toyscreen</h2></a>
+        </header>

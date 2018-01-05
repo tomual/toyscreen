@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+/* GLOBAL */
+
+header {
+    text-align: center;
+}
+header h2 {
+    margin: auto;
+    font-variant: small-caps;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+label {
+	display: block;
+	margin-top: 1em;
+}
+
+.error {
+	font-size: 0.9em;
+	color: #B71C1C;
+}
+
+label.checkbox {
+	display: inline;
+}
+
+input[type=submit] {
+	margin-top: 1em;
+}
+
+.auth {
+	text-align: right;
+}
+
+button.logout {
+	margin-left: 1em;
+}
+
+/* SITE */
+
 body {
 	font-size: 13px;
 	font-family: 'PT Sans', sans-serif;
@@ -16,7 +61,24 @@ body {
 	padding: 30px 60px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 	box-sizing: border-box;
-	margin: 30px auto;
+	margin: auto;
+	margin-top: 30px;
+}
+
+footer {
+	width: 600px;
+	font-size: 0.8em;
+	padding: 8px 10px;
+	box-sizing: border-box;	
+	margin: auto;
+	text-align: right;
+	opacity: 0.3;
+	letter-spacing: 1px;
+}
+
+footer a {
+	text-decoration: none;
+	color: inherit;
 }
 
 img {
