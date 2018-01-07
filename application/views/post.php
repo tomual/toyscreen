@@ -8,6 +8,7 @@
 	<label>Message</label>
 	<textarea name="message"></textarea>
 	<?php echo form_error('message') ?>
+	<br>
 	<input type="submit" value="Post">
 <?php echo form_close() ?>
 

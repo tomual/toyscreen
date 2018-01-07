@@ -72,13 +72,17 @@ footer {
 	box-sizing: border-box;	
 	margin: auto;
 	text-align: right;
-	opacity: 0.3;
+	color: #CCC;
 	letter-spacing: 1px;
 }
 
 footer a {
 	text-decoration: none;
 	color: inherit;
+}
+
+footer button {
+	color: #000;
 }
 
 img {
