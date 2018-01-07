@@ -22,8 +22,9 @@
         
         <style type="text/css">
             body {
-                background: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
-                background-repeat: repeat;
+                <?php if( !empty($site->background)): ?>
+                    background: url(<?php echo $site->background ?>);
+                <?php endif ?>
             }
         </style>
         <div class="container"> 

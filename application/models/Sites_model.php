@@ -38,4 +38,10 @@ class Sites_model extends CI_Model {
         $result->user = $user;
         return $result;
     }
+
+    public function save($site_id, $data)
+    {
+        $this->db->where('site_id', $site_id);
+        $this->db->update('sites', $data);
+    }
 }

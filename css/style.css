@@ -48,6 +48,8 @@ button.logout {
 body {
 	font-size: 13px;
 	font-family: 'PT Sans', sans-serif;
+	background: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
+	background-repeat: repeat;
 }
 
 .header {
