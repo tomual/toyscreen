@@ -40,8 +40,11 @@ class Site extends CI_Controller {
 
 	public function home($site)
 	{
-		$post = $this->posts_model->get_post($site->site_id);
-		$this->load->view('site', compact('post', 'site'));
+		$post_id = $this->uri->segment(2);
+		$post = $this->posts_model->get_post($site->site_id, $post_id);
+		$next = $this->posts_model->get_next($post);
+		$prev = $this->posts_model->get_prev($post);
+		$this->load->view('site', compact('post', 'site', 'next', 'prev'));
 	}
 
 	public function archive($site)

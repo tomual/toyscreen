@@ -41,6 +41,26 @@ class Posts_model extends CI_Model {
         return $results;
     }
 
+    public function get_next($post)
+    {
+        $this->db->where('posted >', $post->posted);
+        $this->db->where('site_id', $post->site_id);
+        $this->db->order_by('post_id', 'ASC');
+        $this->db->limit(1);
+        $results = $this->db->get('posts')->first_row();
+        return $results;
+    }
+
+    public function get_prev($post)
+    {
+        $this->db->where('posted <', $post->posted);
+        $this->db->where('site_id', $post->site_id);
+        $this->db->order_by('post_id', 'DESC');
+        $this->db->limit(1);
+        $results = $this->db->get('posts')->first_row();
+        return $results;
+    }
+
     public function get_latest()
     {
         $this->db->order_by('posted', 'DESC');
