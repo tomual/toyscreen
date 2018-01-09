@@ -66,7 +66,15 @@ class Posts_model extends CI_Model {
         $this->db->order_by('posted', 'DESC');
         $this->db->order_by('post_id', 'DESC');
         $this->db->group_by('post_id');
-        $this->db->limit('10');        
+        $this->db->limit('10');
+        $results = $this->db->get('posts')->result();
+        return $results;
+    }
+
+    public function get_archive($site_id)
+    {
+        $this->db->select('post_id, posted');
+        $this->db->order_by('posted', 'DESC');
         $results = $this->db->get('posts')->result();
         return $results;
     }

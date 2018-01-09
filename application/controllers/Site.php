@@ -49,7 +49,8 @@ class Site extends CI_Controller {
 
 	public function archive($site)
 	{
-		$this->load->view('archive', compact('site'));
+		$posts = $this->posts_model->get_archive($site->site_id);
+		$this->load->view('archive', compact('site', 'posts'));
 	}
 
 	public function board($site)
