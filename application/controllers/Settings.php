@@ -28,7 +28,8 @@ class Settings extends CI_Controller {
 				$data = array(
 					'title'	=> $this->input->post('title'),
 					'background' => $this->input->post('background'),
-					'info'	=> $this->input->post('info')
+					'info'	=> $this->input->post('info'),
+					'avatar' => $this->input->post('avatar')
 				);
 				$this->sites_model->save($site->site_id, $data);
 				redirect('settings');

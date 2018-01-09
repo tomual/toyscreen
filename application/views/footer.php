@@ -1,6 +1,8 @@
 
             </div>
         </div>
+        <div class="dim"></div>
+        <div class="display"></div>
         <footer>
             <a href="<?php echo base_url() ?>">toyscreen</a>
             <a href="<?php echo base_url('settings') ?>"><button>Settings</button></a>
