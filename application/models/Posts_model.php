@@ -43,6 +43,9 @@ class Posts_model extends CI_Model {
 
     public function get_next($post)
     {
+        if(!$post) {
+            return null;
+        }
         $this->db->where('posted >', $post->posted);
         $this->db->where('site_id', $post->site_id);
         $this->db->order_by('post_id', 'ASC');
@@ -53,6 +56,9 @@ class Posts_model extends CI_Model {
 
     public function get_prev($post)
     {
+        if(!$post) {
+            return null;
+        }
         $this->db->where('posted <', $post->posted);
         $this->db->where('site_id', $post->site_id);
         $this->db->order_by('post_id', 'DESC');
@@ -74,6 +80,7 @@ class Posts_model extends CI_Model {
     public function get_archive($site_id)
     {
         $this->db->select('post_id, posted');
+        $this->db->where('site_id', $site_id);
         $this->db->order_by('posted', 'DESC');
         $results = $this->db->get('posts')->result();
         return $results;

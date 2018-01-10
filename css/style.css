@@ -3,8 +3,10 @@
 /* GLOBAL */
 
 header {
-    text-align: center;
+    /*text-align: center;*/
+    padding: 1em 0;
 }
+
 header h2 {
     margin: auto;
     font-variant: small-caps;
@@ -15,6 +17,10 @@ header h2 {
 header a {
 	text-decoration: none;
 	color: inherit;
+}
+
+header img {
+	padding-left: 5px;
 }
 
 label {
@@ -53,7 +59,20 @@ body {
 }
 
 .header {
-	text-align: center;
+	/*text-align: center;*/
+}
+
+.header h1 {
+	font-weight: 600;
+}
+
+h1 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 1.2em;
 }
 
 .container {
@@ -61,11 +80,23 @@ body {
 	min-height: 650px;
 	background: #FFF;
 	padding: 30px 60px;
-	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	box-sizing: border-box;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 3.9em;
 	position: relative;
+}
+
+.container.home {
+	margin-top: 1em;
+}
+
+.auth {
+	width: 600px;
+	padding: 0;
+	box-sizing: border-box;
+	margin: auto;
+	margin-top: 1em;
 }
 
 footer {
@@ -95,7 +126,7 @@ img {
 .menu ul {
 	padding: 0;
 	margin: 0;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .menu li {
@@ -114,9 +145,19 @@ img {
 	display: inline-block;
 }
 
+.menu li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.menu li a:hover {
+	text-decoration: underline;
+}
+
 img.screen {
-	padding: 30px 0;
+	margin: 30px 0;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .main {
@@ -125,6 +166,17 @@ img.screen {
 .pagination {
     width: 100%;
     padding: 30px 0;
+}
+
+.pagination a {	
+	text-decoration: none;
+	color: inherit;
+	opacity: 0.5;
+}
+
+.pagination a:hover {
+	text-decoration: underline;
+	opacity: 1;
 }
 
 .next {
@@ -164,4 +216,18 @@ img.screen {
     max-width: 100%;
     max-height: 80%;
     margin-top: 50px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+	padding: 0.5em;
+	margin: 0.5em 0;
+	width: 100%;
+}
+
+textarea {
+	padding: 0.5em;
+	margin: 0.5em 0;
+	width: 100%;
 }

@@ -12,7 +12,7 @@
 	<input type="text" name="background" value="<?php echo set_value('background', $site->background) ?>">
 	<?php echo form_error('background') ?>
 	<label>Info Text</label>
-	<textarea name="info"><?php echo set_value('info', $site->info) ?></textarea>
+	<textarea rows="7name="info"><?php echo set_value('info', $site->info) ?></textarea>
 	<?php echo form_error('info') ?>
 	<br>
 	<input type="submit" value="Save">

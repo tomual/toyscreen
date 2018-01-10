@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Title</title>
+        <title><?php echo $site->title ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
         </style>
         <div class="container"> 
             <div class="header">
-                <h1><?php echo $site->title ?></h1>
+                <h1><a href="<?php echo base_url("~{$site->user->username}") ?>"><?php echo $site->title ?></a></h1>
             </div>
             <div class="menu">
                 <ul>

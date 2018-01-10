@@ -15,10 +15,10 @@
 </div>
 <div class="pagination">
 	<?php if(!empty($next)): ?>
-		<a href="<?php echo base_url('~' . $site->user->username . '/' . $next->post_id) ?>" class="next">Next</a>
+		<a href="<?php echo base_url('~' . $site->user->username . '/' . $next->post_id) ?>" class="next">&laquo; Next</a>
 	<?php endif ?>
 	<?php if(!empty($prev)): ?>
-		<a href="<?php echo base_url('~' . $site->user->username . '/' . $prev->post_id) ?>" class="prev">Previous</a>
+		<a href="<?php echo base_url('~' . $site->user->username . '/' . $prev->post_id) ?>" class="prev">Previous &raquo;</a>
 	<?php endif ?>
 </div>
 

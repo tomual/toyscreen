@@ -6,7 +6,7 @@
 	<input type="text" name="image">
 	<?php echo form_error('image') ?>
 	<label>Message</label>
-	<textarea name="message"></textarea>
+	<textarea name="message" rows="7"></textarea>
 	<?php echo form_error('message') ?>
 	<br>
 	<input type="submit" value="Post">

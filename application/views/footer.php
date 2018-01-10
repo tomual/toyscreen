@@ -5,8 +5,13 @@
         <div class="display"></div>
         <footer>
             <a href="<?php echo base_url() ?>">toyscreen</a>
-            <a href="<?php echo base_url('settings') ?>"><button>Settings</button></a>
-            <a href="<?php echo base_url('post') ?>"><button>New Post</button></a>
+
+            <?php if($this->ion_auth->logged_in()): ?>
+                <?php if($site->user->username === $this->ion_auth->user()->username): ?>
+                    <a href="<?php echo base_url('settings') ?>"><button>Settings</button></a>
+                    <a href="<?php echo base_url('post') ?>"><button>New Post</button></a>
+                <?php endif ?>
+            <?php endif ?>
         </footer>
 
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
