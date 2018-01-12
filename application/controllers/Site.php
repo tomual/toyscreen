@@ -92,6 +92,14 @@ class Site extends CI_Controller {
 			}
 		}
 
+		$delete = $this->uri->segment(3) == 'delete';
+		if($delete) {
+			$message_id = $this->uri->segment(4);
+			if(!empty($message_id)) {
+				$this->sites_model->delete_message($site, $message_id);
+			}
+		}
+
 		$messages = $this->sites_model->get_board($site->site_id);
 		$this->load->view('board', compact('site', 'captcha', 'messages'));
 	}

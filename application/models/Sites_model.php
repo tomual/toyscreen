@@ -57,4 +57,13 @@ class Sites_model extends CI_Model {
         $result = $this->db->get('board')->result();
         return $result;
     }
+
+    public function delete_message($site, $message_id)
+    {
+        if($site->user->username === $this->ion_auth->user()->username) {
+            $this->db->where('message_id', $message_id);
+            $this->db->where('site_id', $site->site_id);
+            $this->db->delete('board');
+        }
+    }
 }
