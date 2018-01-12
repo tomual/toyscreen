@@ -23,3 +23,8 @@ function closeGallery() {
 	$('.display').fadeOut('fast');
 	$('.dim').fadeOut('fast');
 }
+
+function openBoardForm() {
+	$('#board-form-button').hide();
+	$('#board-form').slideDown();
+}

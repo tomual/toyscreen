@@ -44,4 +44,17 @@ class Sites_model extends CI_Model {
         $this->db->where('site_id', $site_id);
         $this->db->update('sites', $data);
     }
+
+    public function create_message($data)
+    {
+        $this->db->insert('board', $data);
+        return $this->db->insert_id();
+    }
+
+    public function get_board($site_id)
+    {
+        $this->db->where('site_id', $site_id);
+        $result = $this->db->get('board')->result();
+        return $result;
+    }
 }
