@@ -9,6 +9,7 @@ header {
 
 header h2 {
     margin: auto;
+    padding: 0;
     font-variant: small-caps;
     font-size: 1em;
     letter-spacing: 1px;
@@ -49,6 +50,10 @@ button.logout {
 	margin-left: 1em;
 }
 
+a button {
+	color: #000;
+}
+
 /* SITE */
 
 body {
@@ -56,6 +61,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	background: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
 	background-repeat: repeat;
+	color: #333;
 }
 
 .header {
@@ -119,6 +125,7 @@ footer a {
 
 footer button {
 	color: #000;
+	margin: 0;
 }
 
 img {
@@ -248,4 +255,8 @@ textarea {
 .message b {
 	display: inline-block;
 	padding-bottom: 1em;
+}
+
+.message a {
+	float: right;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title><?php echo $site->title ?></title>
+        <title><?php echo ($this->uri->segment(2) && !is_numeric($this->uri->segment(2))) ? ucfirst($this->uri->segment(2)) . ' | ' : '' ?><?php echo $site->title ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,12 +11,17 @@
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-
         <link rel="stylesheet" href="<?php echo base_url('css/normalize.css') ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
         <link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TFG9N9Q');</script>
+        <!-- End Google Tag Manager -->
     </head>
     <body>
         

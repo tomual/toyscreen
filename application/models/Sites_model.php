@@ -13,7 +13,7 @@ class Sites_model extends CI_Model {
         $data = array(
             'user_id' => $user->user_id,
             'title' => 'My Game Log',
-            'about' => 'This is my game log'
+            'info' => 'This is my game log'
         );
         $this->db->insert('sites', $data);
         return $this->db->insert_id();
