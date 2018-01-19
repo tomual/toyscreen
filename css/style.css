@@ -42,10 +42,6 @@ input[type=submit], button {
 	margin-top: 1em;
 }
 
-.auth {
-	text-align: right;
-}
-
 button.logout {
 	margin-left: 1em;
 }
@@ -59,7 +55,6 @@ a button {
 body {
 	font-size: 13px;
 	font-family: 'PT Sans', sans-serif;
-	background: url('https://www.toptal.com/designers/subtlepatterns/patterns/hypnotize.png');
 	background-repeat: repeat;
 	color: #333;
 }
@@ -97,15 +92,10 @@ h2 {
 
 .container.home {
 	margin-top: 1em;
+	box-shadow: none;
+	text-align: center;
 }
 
-.auth {
-	width: 600px;
-	padding: 0;
-	box-sizing: border-box;
-	margin: auto;
-	margin-top: 1em;
-}
 
 footer {
 	width: 600px;
@@ -232,7 +222,7 @@ input[type=password],
 input[type=email] {
 	padding: 0.5em;
 	margin: 0.5em 0;
-	width: 100%;
+    width: 50%;
 }
 
 textarea {

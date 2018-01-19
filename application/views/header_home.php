@@ -28,18 +28,19 @@
     </head>
     <body>
 
-        <div class="auth">
-            <?php if($this->ion_auth->logged_in()): ?>
-                Hello, <a href="<?php echo base_url('~' . $this->ion_auth->user()->username) ?>"><?php echo $this->ion_auth->user()->username ?></a>
-                <a href="<?php echo base_url('user/logout') ?>"><button class="logout">Log Out</button></a>
-            <?php else: ?>
-                <a href="<?php echo base_url('user/login') ?>"><button>Log In</button></a>
-                <a href="<?php echo base_url('user/register') ?>"><button>Register</button></a>
-            <?php endif ?>
-        </div>
 
         <div class="container home">
         <header>
             <a href="<?php echo base_url() ?>"><img src="https://tomual.com/images/toybox/dogs/dog-1.png"></a>
             <a href="<?php echo base_url() ?>"><h2>toyscreen</h2></a>
         </header>
+
+        <div class="auth">
+            <?php if($this->ion_auth->logged_in()): ?>
+                Hello, <a href="<?php echo base_url('~' . $this->ion_auth->user()->username) ?>"><?php echo $this->ion_auth->user()->username ?></a> / 
+                <a href="<?php echo base_url('user/logout') ?>">Log Out</a>
+            <?php else: ?>
+                <a href="<?php echo base_url('user/login') ?>">Log In</a> / 
+                <a href="<?php echo base_url('user/register') ?>">Register</a>
+            <?php endif ?>
+        </div>
