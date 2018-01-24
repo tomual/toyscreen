@@ -223,12 +223,14 @@ input[type=email] {
 	padding: 0.5em;
 	margin: 0.5em 0;
     width: 50%;
+    box-sizing: border-box;
 }
 
 textarea {
 	padding: 0.5em;
 	margin: 0.5em 0;
 	width: 100%;
+    box-sizing: border-box;
 }
 
 .messages {
@@ -249,4 +251,42 @@ textarea {
 
 .message a {
 	float: right;
+}
+
+@media screen and (max-width: 650px) {
+    .container.home {
+    	width: 100%;
+    	padding: 15px 60px;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+	    width: 100%;
+	}
+
+	.container {
+	    width: auto;
+	    padding: 15px 30px;
+    	min-height: 450px;
+	    margin: 10px;
+	    box-sizing: border-box;
+	}
+
+	footer {
+	    width: 100%;
+	    font-size: 0.8em;
+	    padding: 8px 10px;
+	    box-sizing: border-box;
+	    margin: auto;
+	    text-align: right;
+	    color: #CCC;
+	    letter-spacing: 1px;
+	}
+
+	.header {
+		text-align: center;
+	}
+
+	.menu ul {
+	    text-align: center;
+	}
 }

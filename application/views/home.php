@@ -1,5 +1,7 @@
 <?php $this->load->view('header_home.php') ?>
 
+<img class="promo" src="<?php echo base_url('img/promo.png') ?>">
+
 <h1>Share your daily game screenshot</h1>
 
 <p>Create your personal game screenshot log - post a screenshot every day to see your progress over time. Simply provide an image URL and a message for the day!</p>
