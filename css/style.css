@@ -50,6 +50,14 @@ a button {
 	color: #000;
 }
 
+.promo {
+	max-width: none;
+    width: 1050px;
+    margin-left: -283px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /* SITE */
 
 body {
@@ -254,9 +262,15 @@ textarea {
 }
 
 @media screen and (max-width: 650px) {
+	.promo {
+		max-width: 100%;
+		margin: 20px 0;
+	}
+
     .container.home {
     	width: 100%;
-    	padding: 15px 60px;
+    	padding: 15px 30px;
+	    margin: 0;
     }
 
     input[type=text], input[type=password], input[type=email] {
