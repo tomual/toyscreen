@@ -71,7 +71,7 @@ class User extends CI_Controller {
 		        	$site = $this->sites_model->create($user);
 
 		        	$this->session->set_flashdata('success', 'Successfully signed up');
-		        	redirect('/');
+		        	redirect('/settings');
 		        } else {
 					$message = $this->ion_auth->errors();
 		        }

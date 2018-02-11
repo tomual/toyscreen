@@ -29,6 +29,8 @@
             body {
                 <?php if( !empty($site->background)): ?>
                     background: url(<?php echo $site->background ?>);
+                <?php else: ?>
+                    background: url(<?php echo base_url('img/default.png') ?>);
                 <?php endif ?>
             }
         </style>
