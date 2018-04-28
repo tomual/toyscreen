@@ -104,6 +104,22 @@ h2 {
 	text-align: center;
 }
 
+.container.home a {
+    color: #7e7967;
+    text-decoration: none;
+}
+
+.container.home a:hover {
+    text-decoration: underline;
+}
+
+.container.home header a:hover {
+    text-decoration: none;
+}
+
+.text-muted {
+    opacity: 0.5;
+}
 
 footer {
 	width: 600px;

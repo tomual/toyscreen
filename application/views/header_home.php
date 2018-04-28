@@ -40,7 +40,7 @@
                 Hello, <a href="<?php echo base_url('~' . $this->ion_auth->user()->username) ?>"><?php echo $this->ion_auth->user()->username ?></a> / 
                 <a href="<?php echo base_url('user/logout') ?>">Log Out</a>
             <?php else: ?>
-                <a href="<?php echo base_url('user/login') ?>">Log In</a> / 
+                <a href="<?php echo base_url('user/login') ?>">Log In</a> <span class="text-muted">/</span>
                 <a href="<?php echo base_url('user/register') ?>">Register</a>
             <?php endif ?>
         </div>
